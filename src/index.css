@@ -189,7 +189,7 @@ a.web-panel p {
 .up-btn {
     position: fixed;
     right: calc(1em + 2vw);
-    bottom: calc(2em + 3vw);;
+    bottom: calc(2em + 2.8vw);;
     z-index: 99;
 
     width: calc(2.3rem + 1vw);
