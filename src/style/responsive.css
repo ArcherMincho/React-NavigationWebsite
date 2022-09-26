@@ -1,0 +1,42 @@
+@media screen and (max-width: 768px) {
+
+    /* nav bar: changed from horizontal to vertical */
+
+    nav {
+        position: unset;
+    }
+
+    nav ul {
+        display: block;
+        border-bottom: none;
+    }
+
+    nav ul li {
+        border-bottom: 5px solid #696565;
+        border-radius: 8px;
+    }
+
+    /* switch menu: changed from a coherent switch bar to separate items */
+
+    /* set the switch menu background color as the page background color */
+    ul.switch-menu {
+        background-color: #615c5c;
+        border-radius: none;
+    }
+
+    /* let all switch menu buttons has its own background and border shapes */
+    ul.switch-menu li {
+        padding: 0.5em 1.3em;
+        margin: 0.5em;
+    }
+
+    ul.switch-menu li,
+    ul.switch-menu li:first-child,
+    ul.switch-menu li:last-child {
+        border-radius: 2em;
+    }
+
+    ul.switch-menu li:not(.current-type) {
+        background-color: #6d6a6a;
+    }
+}

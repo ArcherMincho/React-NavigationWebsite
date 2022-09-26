@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    /* ******************* let the content of the main area will not be blocked by the sticky header. */
+    scroll-padding-top: 5em;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-width: 500px;
+    font: 1em/1.3 "Open Sans", Arial, Helvetica, sans-serif;
+    background-color: #615c5c;
+}
+
+
+/* header style */
+
+header {
+    padding: 8em 0 5em 0;
+    text-align: center;
+    letter-spacing: 0.8rem;
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+
+h1.hover-transition {
+    font-size: calc(2.5rem + 2.5vw);
+    color: #e1e1e1;
+    font-weight: 800;
+    position: relative;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+
+h1.hover-transition:hover {
+    transform: translateY(2px) translateX(1px);
+    color: #fff;
+}
+
+
+/* content area layout */
+
+.content {
+    width: 75%;
+    margin: 3% auto;
+}
+
+/* type side bar style */
+
+nav {
+    position: sticky;
+    top: -2px;
+    z-index: 2;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
+    list-style: none;
+    border-bottom: 5px solid #696565;
+    border-radius: 8px;
+}
+
+nav ul li {
+    flex: 1 50px;
+}
+
+nav ul li button {
+    border: none;
+    padding: 1em;
+    width: 100%;
+    font-size: 1.2rem;
+    color: rgb(232, 232, 232);
+    text-align: center;
+    background-color: #615c5c;
+    cursor: pointer;
+}
+
+nav ul li button:hover {
+    font-weight: bolder;
+}
+
+
+/* Web list style */
+
+.sub-web-list {
+    margin-top: 3em;
+}
+
+.sub-web-list h2 {
+    margin-top: 2em;
+    padding: .2em;
+    font-size: 1.7rem;
+    color: #e1e1e1;
+}
+
+/* subtype switch style */
+
+ul.switch-menu {
+    position: relative;
+
+    width: fit-content;
+    height: fit-content;
+    margin-top: 1em;
+    list-style: none;
+    background-color: #6d6a6a;
+    border-radius: 2em;
+    border: none;
+}
+
+.switch-menu li {
+    display: inline-block;
+    padding: 0.7em 1.5em;
+    color: #e1e1e1;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* ************* let the first and last item of the switch menu have round border */
+.switch-menu li:last-child {
+    border-radius: 0 2em 2em 0;
+}
+
+.switch-menu li:first-child {
+    border-radius: 2em 0 0 2em;
+}
+
+.switch-menu li:hover {
+    background-color: #504b4b;
+    color: #f4f4f4;
+}
+
+li.current-type {
+    background-color: #3d3838;
+    color: #eae8e8;
+}
+
+/* Web panel style */
+
+.webs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+    margin-top: 2em;
+}
+
+a.web-panel {
+    display: block;
+    box-sizing: border-box;
+
+    height: 8em;
+    padding: 1.2em;
+}
+
+a.web-panel,
+a.web-panel:active,
+a.web-panel:visited {
+    text-decoration: none;
+    color: #e1e1e1;
+}
+
+a.web-panel:hover {
+    color: white;
+}
+
+a.web-panel h3 {
+    font-size: 1.2rem;
+}
+
+a.web-panel p {
+    padding-top: 1.2em;
+    line-height: 1.5;
+}
+
+/* footer style */
+
+.up-btn {
+    position: fixed;
+    right: calc(1em + 2vw);
+    bottom: calc(2em + 3vw);;
+    z-index: 99;
+
+    width: calc(2.3rem + 1vw);
+    height: calc(2.3rem + 1vw);
+    line-height: calc(1.8rem + 1vw);
+
+    background-color: #807f7f;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 100%;
+    border: none;
+    box-shadow: 4px 4px 6px rgba(76, 77, 75, 0.35);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.up-btn:hover {
+    transform: scale(1.2);
+}
