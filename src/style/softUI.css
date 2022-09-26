@@ -1,0 +1,19 @@
+.soft-UI {
+    border-radius: 10px;
+    background: #615c5c;
+    box-shadow: 7px 7px 13px #595555,
+        -7px -7px 13px #696363;
+}
+
+.soft-UI:hover {
+    /* transform: translateY(-4px) translateX(-2px); */
+    border-radius: 10px;
+    /* background: #615c5c; */
+    background: linear-gradient(145deg, #575353, #686262);
+    box-shadow: 8px 8px 10px #524e4e,
+        -8px -8px 10px #706a6a;
+}
+
+.soft-UI:active {
+    transform: translateY(2px) translateX(1px);
+}
