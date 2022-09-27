@@ -1,55 +1,247 @@
 // websites object: parsed from JSON
 let websites = {
-    "FrontedEnd": [
+    "Frontend": [
+        {
+            "name": "Web Development Docs",
+            "description": "Official mdn web docs",
+            "url": "https://developer.mozilla.org/zh-CN/docs/Web",
+            "subtype": "General"
+        },
+        {
+            "name": "Httpbin.org",
+            "description": "A simple HTTP request & response service",
+            "url": "http://httpbin.org/",
+            "subtype": "General"
+        },
+        {
+            "name": "Can I Use..?",
+            "description": "Check the availability of Html, CSS, ..",
+            "url": "https://caniuse.com/",
+            "subtype": "General"
+        },
+        {
+            "name": "Carbon",
+            "description": "Create beautiful images of source code",
+            "url": "https://carbon.now.sh/",
+            "subtype": "General"
+        },
+        {
+            "name": "chrome Developers Tool",
+            "description": "Official docs",
+            "url": "https://developer.chrome.com/docs/devtools/overview/",
+            "subtype": "General"
+        },
         {
             "name": "Glassmorphism Generator",
             "description": "online CSS generator for 'frosted glass' effect",
             "url": "https://hype4.academy/tools/glassmorphism-generator",
-            "subtype": "CSS Style"
+            "subtype": "CSS Generator"
         },
         {
             "name": "Neumorphism",
             "description": "online soft UI CSS shadow generator",
             "url": "https://neumorphism.io/#e0e0e0",
-            "subtype": "CSS Style"
+            "subtype": "CSS Generator"
         },
         {
             "name": "Animate.CSS",
             "description": "An open-source library for CSS animations",
             "url": "https://animate.style/",
-            "subtype": "CSS Style"
+            "subtype": "CSS Generator"
         },
         {
             "name": "Uiverse",
-            "description": "a CSS style library of buttons, switches, checkboxes, cards etc.",
+            "description": "a CSS Generator library of buttons, switches, checkboxes, cards etc.",
             "url": "https://uiverse.io/",
-            "subtype": "CSS Style"
-        },
-        {
-            "name": "useAnimations",
-            "description": "Button animations",
-            "url": "https://useanimations.com/index.html#explore",
-            "subtype": "CSS Style"
+            "subtype": "CSS Generator"
         },
         {
             "name": "CodePen",
             "description": "Online code editor, contains a lot good design",
             "url": "https://codepen.io",
-            "subtype": "Editor"
-        }
+            "subtype": "CSS Generator"
+        },
+        {
+            "name": "React Tutorial",
+            "description": "Official React.js tutorial",
+            "url": "https://reactjs.org/docs/hello-world.html",
+            "subtype": "React"
+        },
+        {
+            "name": "Small Book of React.js",
+            "description": "React tutorial by Uncle Huzi",
+            "url": "https://hyf.js.org/react-naive-book/lesson1",
+            "subtype": "React"
+        },
+        {
+            "name": "Guide of Building A React Blog",
+            "description": "An article that teaches how to build a react universal blog app step by step",
+            "url": "https://www.sitepoint.com/building-a-react-universal-blog-app-a-step-by-step-guide/",
+            "subtype": "React"
+        },
+        {
+            "name": "Controlled V.S. Uncontrolled",
+            "description": "An article that analyzes controlled and uncontrolled form inputs in React",
+            "url": "https://goshacmd.com/controlled-vs-uncontrolled-inputs-react/",
+            "subtype": "React"
+        },
+        {
+            "name": "HTML 5 Outliner",
+            "description": "Outline html from input html files, URL, and live code",
+            "url": "https://gsnedders.html5.org/outliner",
+            "subtype": "Html"
+        },
+        {
+            "name": "Selectors Level 3",
+            "description": "Official CSS document",
+            "url": "https://www.w3.org/TR/selectors-3",
+            "subtype": "CSS"
+        },
+        {
+            "name": "JSHint",
+            "description": "A static code analysis tool for JavaScript",
+            "url": "https://jshint.com",
+            "subtype": "JavaScript"
+        },
+        {
+            "name": "ES6 Tutorial",
+            "description": "A good and easy-to-understand ES6 Tutorial",
+            "url": "https://www.javascripttutorial.net/es6",
+            "subtype": "JavaScript"
+        },
+        {
+            "name": "ECMAScript 6 Getting Started Tutorial",
+            "description": "ES6 tutorial by Yifeng Ruan",
+            "url": "https://es6.ruanyifeng.com/#README",
+            "subtype": "JavaScript"
+        },
+        {
+            "name": "Javascript 'this' word",
+            "description": "An article that explains how 'this' keyword work in JS",
+            "url": "https://www.vojtechruzicka.com/javascript-this-keyword/",
+            "subtype": "JavaScript"
+        },
+        {
+            "name": "Icomoon.io",
+            "description": "Free vector icon font & SVGs",
+            "url": "https://icomoon.io/app/#/select",
+            "subtype": "Font"
+        },
+        {
+            "name": "Facetype.js",
+            "description": "Convert a font to a typeface.js font",
+            "url": "https://gero3.github.io/facetype.js",
+            "subtype": "Font"
+        },
+        {
+            "name": "Fonts.ninja",
+            "description": "Detect what type of font a website is using",
+            "url": "https://www.fonts.ninja/",
+            "subtype": "Font"
+        },
+        {
+            "name": "useAnimations",
+            "description": "Button animations",
+            "url": "https://useanimations.com/index.html#explore",
+            "subtype": "Font"
+        },
+        {
+            "name": "GitHub",
+            "description": "An open source community, with repository management enabled with Git",
+            "url": "https://github.com/",
+            "subtype": "Forum"
+        },
+        {
+            "name": "Stack Overflow",
+            "description": "A public platform building the definitive collection of coding questions and answers",
+            "url": "https://stackoverflow.com/",
+            "subtype": "Forum"
+        },
+        {
+            "name": "LeetCode",
+            "description": "The world's leading online programming learning and practice platform",
+            "url": "https://leetcode.com/explore/learn/",
+            "subtype": "Forum"
+        },
     ],
     "Design": [
         {
             "name": "Canva",
             "description": "Provide templates for writings, covers, pictures, etc.",
-            "url": "https://www.canva.cn",
-            "subtype": "Template"
+            "url": "https://www.canva.com",
+            "subtype": "Inspiration"
+        },
+        {
+            "name": "Dribbble",
+            "description": "A lot of high-quality design portfolios",
+            "url": "https://dribbble.com",
+            "subtype": "Inspiration"
+        },
+        {
+            "name": "Web Designer Depot",
+            "description": "Web Design Blog",
+            "url": "https://www.webdesignerdepot.com/",
+            "subtype": "Inspiration"
         },
         {
             "name": "NN Group",
             "description": "Professional knowledge of UX design",
             "url": "https://www.nngroup.com",
-            "subtype": "Article"
+            "subtype": "Methodology"
+        },
+        {
+            "name": "How to 6-3-5 Brainwriting",
+            "description": "What, Why, How",
+            "url": "https://www.podojo.com/blog/how-to-6-3-5-brainwriting/",
+            "subtype": "Methodology"
+        },
+        {
+            "name": "5 stages in Design Thinking",
+            "description": "Empathize, Define, Ideate, Prototype, Test",
+            "url": "https://www.interaction-design.org/literature/article/5-stages-in-the-design-thinking-process",
+            "subtype": "Methodology"
+        },
+        {
+            "name": "Pilot Testing",
+            "description": "Getting it right, wrote by NN Group",
+            "url": "https://www.nngroup.com/articles/pilot-testing/",
+            "subtype": "Methodology"
+        },
+        {
+            "name": "Between-Subjects & Within-Subjects",
+            "description": "Wrote by NN Group",
+            "url": "https://www.nngroup.com/articles/between-within-subjects/",
+            "subtype": "Methodology"
+        },
+        {
+            "name": "Storyboard Creator",
+            "description": "Comic storyboard strip maker",
+            "url": "https://www.storyboardthat.com/storyboard-creator",
+            "subtype": "UX Tool"
+        },
+        {
+            "name": "Figma",
+            "description": "Prototype tool",
+            "url": "https://www.figma.com",
+            "subtype": "UX Tool"
+        },
+        {
+            "name": "Miro",
+            "description": "Online whiteboard for visual collaboration",
+            "url": "https://miro.com/app/dashboard/",
+            "subtype": "UX Tool"
+        },
+        {
+            "name": "Name Snack",
+            "description": "Business name generator",
+            "url": "https://www.namesnack.com/",
+            "subtype": "UX Tool"
+        },
+        {
+            "name": "oTranscribe",
+            "description": "Online verbatim transcribe tool",
+            "url": "https://otranscribe.com/",
+            "subtype": "UX Tool"
         },
         {
             "name": "MockuPhone",
@@ -127,6 +319,12 @@ let websites = {
             "name": "seeklogo",
             "description": "logo images for 500000+ brands",
             "url": "https://seeklogo.com",
+            "subtype": "Vector"
+        },
+        {
+            "name": "Looka",
+            "description": "Design your own beautiful brand logo by inputting company name and category",
+            "url": "https://looka.com/?gclid=Cj0KCQjwguGYBhDRARIsAHgRm4_4qNXjR69h4jAkylpLt1gmGi_Fl_CDaR6BpKOhXI_cABJ0kQRyHEEaAvQ_EALw_wcB",
             "subtype": "Vector"
         },
         {
@@ -230,12 +428,18 @@ let websites = {
             "subtype": "English"
         }
     ],
-    "Video": [
+    "Study": [
         {
-            "name": "PR Template",
-            "description": "Premiere templates",
-            "url": "https://prmuban.com",
-            "subtype": "Template"
+            "name": "Cite This For Me",
+            "description": "Online tool to create Harvard, APA, & MLA citations",
+            "url": "https://www.citethisforme.com/",
+            "subtype": "Study"
+        },
+        {
+            "name": "Reference Guide for APA 7",
+            "description": "By Karolinska Institutet University",
+            "url": "https://kib.ki.se/en/write-cite/writing-references-apa-vancouver/reference-guides/reference-guide-apa-7",
+            "subtype": "Study"
         }
     ]
 };
