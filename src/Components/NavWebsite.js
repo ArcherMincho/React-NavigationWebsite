@@ -1,8 +1,8 @@
 import React from 'react';
-import PageHeader from './PageHeader';
+import PageHeader from './PageHeader.tsx';
 import NavBar from './NavBar';
 import WebList from './WebList';
-import ToTopBtn from './ToTopBtn';
+import ToTopBtn from './ToTopBtn.tsx';
 import { websites, types, subtypeMap, firstSubtypes } from '../WebsitesData';
 
 

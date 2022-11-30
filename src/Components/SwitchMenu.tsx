@@ -1,9 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-function SwitchMenu(props) {
-    const curType = props.curType;
-    const types = props.types;
+function SwitchMenu(props: { curType: string; types: string[]; onSwitch }) {
+    const { curType = '', types = [] } = props;
 
     function uppercaseFirstLetter(str) {
         return str.charAt(0).toUpperCase() + str.slice(1);
@@ -24,16 +22,6 @@ function SwitchMenu(props) {
             })}
         </ul>
     )
-}
-
-SwitchMenu.defaultProps = {
-    curType: '',
-    types: [],
-}
-
-SwitchMenu.propTypes = {
-    curType: PropTypes.string,
-    types: PropTypes.arrayOf(PropTypes.string),
 }
 
 export default SwitchMenu;

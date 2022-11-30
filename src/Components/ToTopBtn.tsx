@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-function ToTopBtn(props) {
+function ToTopBtn() {
     return (
         <a href='#top' className='up-btn'>
             <svg
@@ -21,8 +20,5 @@ function ToTopBtn(props) {
     )
 }
 
-// ToTopBtn.propTypes = {
-
-// }
 
 export default ToTopBtn;

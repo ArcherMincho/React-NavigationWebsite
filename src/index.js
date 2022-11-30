@@ -5,8 +5,14 @@ import './style/softUI.css';
 import './style/underlineBtn.css';
 import './style/responsive.css';
 import NavWebsite from './Components/NavWebsite';
+import store from './store';
+import { Provider } from 'react-redux';
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<NavWebsite />);
+root.render(
+    <Provider store={store}>
+        <NavWebsite />
+    </Provider>
+);
 

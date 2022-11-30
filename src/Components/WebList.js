@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TypeTitle from './TypeTitle';
-import SwitchMenu from './SwitchMenu';
+import TypeTitle from './TypeTitle.tsx';
+import SwitchMenu from './SwitchMenu.tsx';
 import WebPanel from './WebPanel';
 
 function WebList(props) {
