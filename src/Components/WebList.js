@@ -4,65 +4,54 @@ import TypeTitle from './TypeTitle';
 import SwitchMenu from './SwitchMenu';
 import WebPanel from './WebPanel';
 
-class WebList extends React.Component {
+function WebList(props) {
 
-    constructor(props) {
-        super(props);
+    const subtypeMap = props.subtypeMap;
+    const curSubtypes = props.curSubtypes;
+    const websites = props.websites;
+    const listTypeRefs = props.listTypeRefs;
 
-        this.handleSubtypeSwitch = this.handleSubtypeSwitch.bind(this);
+    let types = [];
+    for (const k of subtypeMap.keys()) {
+        types.push(k);
     }
 
-    handleSubtypeSwitch(type, e) {
-        this.props.onSubtypeSwitch(type, e);
-    }
-
-    render() {
-        const subtypeMap = this.props.subtypeMap;
-        const curSubtypes = this.props.curSubtypes;
-        const websites = this.props.websites;
-        const listTypeRefs = this.props.listTypeRefs;
-
-        let types = [];
-        for (const k of subtypeMap.keys()) {
-            types.push(k);
-        }
-
-        return (
-            <section className='web-list'>
-                {types.map((t) => {
-                    const curSubtype = curSubtypes[t];
-                    const curWebs = websites[t].filter((w) => {
-                        return w.subtype === curSubtype
-                    });
-                    return (
-                        <section className='sub-web-list' key={t}>
-                            <TypeTitle
-                                type={t}
-                                typeRef={listTypeRefs.get(t)}
+    return (
+        <section className='web-list'>
+            {types.map((t) => {
+                const curSubtype = curSubtypes[t];
+                const curWebs = websites[t].filter((w) => {
+                    return w.subtype === curSubtype
+                });
+                return (
+                    <section className='sub-web-list' key={t}>
+                        <TypeTitle
+                            type={t}
+                            typeRef={listTypeRefs.get(t)}
+                        />
+                        {subtypeMap.get(t).length > 1 &&
+                            <SwitchMenu
+                                types={subtypeMap.get(t)}
+                                curType={curSubtype}
+                                onSwitch={(e) => {
+                                    props.onSubtypeSwitch(t, e)
+                                }}
                             />
-                            {subtypeMap.get(t).length > 1 &&
-                                <SwitchMenu
-                                    types={subtypeMap.get(t)}
-                                    curType={curSubtype}
-                                    onSwitch={(e) => {
-                                        this.handleSubtypeSwitch(t, e)
-                                    }}
+                        }
+                        <div className='webs-container'>
+                            {curWebs.map((w) => {
+                                return <WebPanel
+                                    key={w.name}
+                                    web={w}
                                 />
-                            }
-                            <div className='webs-container'>
-                                {curWebs.map((w) => {
-                                    return <WebPanel
-                                        key={w.name}
-                                        web={w}
-                                    />
-                                })}
-                            </div>
-                        </section>
-                    )
-                })}
-            </section>
-        )
-    }
+                            })}
+                        </div>
+                    </section>
+                )
+            })}
+        </section>
+    )
+
 }
 
 WebList.defaultProps = {
