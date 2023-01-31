@@ -20,6 +20,7 @@
 
     /* set the switch menu background color as the page background color */
     ul.switch-menu {
+        /* flex-wrap: wrap; */
         background-color: #615c5c;
         border-radius: none;
     }
