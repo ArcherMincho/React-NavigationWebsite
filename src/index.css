@@ -14,7 +14,7 @@ body {
     min-width: 500px;
     font: 1em/1.3 "Open Sans", Arial, Helvetica, sans-serif;
     background-color: #615c5c;
-    padding-bottom: 5em;
+    padding-bottom: 5em; /* leave some space for the body's bottom */
 }
 
 
