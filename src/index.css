@@ -110,7 +110,7 @@ nav ul li button:hover {
 /* subtype switch style */
 
 ul.switch-menu {
-    position: relative;
+    /* display: flex; */
 
     width: fit-content;
     height: fit-content;
@@ -123,6 +123,7 @@ ul.switch-menu {
 
 .switch-menu li {
     display: inline-block;
+    /* flex: 0 1 auto; set flex-grow as 0 to limit li with its content width, instead of letting it grow by using left ul positive free space */
     padding: 0.7em 1.5em;
     color: #e1e1e1;
     font-weight: 800;
