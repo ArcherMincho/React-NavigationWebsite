@@ -4,7 +4,7 @@ Provides a collection of diverse sites of resource and tools.
 
 ## Outcome
 
-<iframe src="https://giphy.com/embed/a5yY1vhvZLyGunVvq7" width="480" height="298" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/navigation-website-a5yY1vhvZLyGunVvq7">via GIPHY</a></p>
+[<iframe src="https://giphy.com/embed/a5yY1vhvZLyGunVvq7" width="480" height="298" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/navigation-website-a5yY1vhvZLyGunVvq7">via GIPHY</a></p>](https://media.giphy.com/media/a5yY1vhvZLyGunVvq7/giphy.gif)
 
 ## Used: create-react-app
 
