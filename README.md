@@ -2,8 +2,11 @@
 
 Provides a collection of diverse sites of resource and tools.
 
-## Used: create-react-app
+## Outcome
 
+<div style="width:100%;height:0;padding-bottom:62%;position:relative;"><iframe src="https://giphy.com/embed/a5yY1vhvZLyGunVvq7" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/navigation-website-a5yY1vhvZLyGunVvq7">via GIPHY</a></p>
+
+## Used: create-react-app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
