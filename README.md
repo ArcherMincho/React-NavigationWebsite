@@ -6,7 +6,7 @@ Provides a collection of diverse sites of resource and tools.
 
 
 
-![image](https://media.giphy.com/media/EmBpsa6fC6M8O7NyxV/giphy.gif)
+![image](https://media.giphy.com/media/EmBpsa6fC6M8O7NyxV/giphy.mp4)
 
 ## Used: create-react-app
 
