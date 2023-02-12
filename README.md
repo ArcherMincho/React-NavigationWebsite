@@ -4,7 +4,9 @@ Provides a collection of diverse sites of resource and tools.
 
 ## Outcome
 
-![image](https://media.giphy.com/media/a5yY1vhvZLyGunVvq7/giphy.gif)
+
+
+![image](https://media.giphy.com/media/EmBpsa6fC6M8O7NyxV/giphy.gif)
 
 ## Used: create-react-app
 
