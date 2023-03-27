@@ -1,6 +1,4 @@
-import { string } from 'prop-types';
-import React from 'react';
-
+import * as React from 'react';
 
 
 function TypeTitle(props: { type: string; typeRef }) {

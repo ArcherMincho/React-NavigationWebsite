@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 function PageHeader(props: { title: string }) {
     const { title = 'page title' } = props;

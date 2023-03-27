@@ -1,11 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 
-function WebPanel(props) {
+
+interface Web {
+    name: string;
+    description: string;
+    url: string;
+    subtype: string;
+};
+
+function WebPanel(props: { web: Web }) {
 
     const web = props.web;
 
-    function uppercaseFirstLetter(str) {
+    function uppercaseFirstLetter(str: string) {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
 
@@ -20,10 +27,6 @@ function WebPanel(props) {
             <p>{uppercaseFirstLetter(web.description)}</p>
         </a>
     )
-}
-
-WebPanel.propTypes = {
-    web: PropTypes.object,
 }
 
 export default WebPanel;

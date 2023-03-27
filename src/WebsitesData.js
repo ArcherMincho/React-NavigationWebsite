@@ -451,7 +451,7 @@ types = [...types];
 // get a map with types as keys and each type's subtypes as values
 let subtypeMap = new Map();
 for (const t of types) {
-    let subs = websites[t].map((w) => { return w.subtype });
+    let subs = websites[t].map((w) => w.subtype);
     subs = new Set(subs);
     subtypeMap.set(t, [...subs]);
 }

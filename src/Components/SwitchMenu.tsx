@@ -1,9 +1,16 @@
-import React from 'react';
+import * as React from 'react';
 
-function SwitchMenu(props: { curType: string; types: string[]; onSwitch }) {
-    const { curType = '', types = [] } = props;
+interface Args {
+    curType: string;
+    types: string[];
+    onSwitch: (e :React.MouseEvent<HTMLElement>) => void;
+}
 
-    function uppercaseFirstLetter(str) {
+function SwitchMenu(props: Args) {
+    // const { curType = '', types = [] } = props;
+    const { curType, types, onSwitch } = props;
+
+    function uppercaseFirstLetter(str: string) {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
 
@@ -14,7 +21,7 @@ function SwitchMenu(props: { curType: string; types: string[]; onSwitch }) {
                     <li
                         key={t}
                         className={(curType == t ? 'current-type' : '')}
-                        onClick={props.onSwitch}
+                        onClick={onSwitch}
                     >
                         {uppercaseFirstLetter(t)}
                     </li>

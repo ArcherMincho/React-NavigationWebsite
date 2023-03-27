@@ -1,17 +1,29 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import TypeTitle from './TypeTitle.tsx';
-import SwitchMenu from './SwitchMenu.tsx';
+import * as React from 'react';
+import TypeTitle from './TypeTitle';
+import SwitchMenu from './SwitchMenu';
 import WebPanel from './WebPanel';
 
-function WebList(props) {
 
-    const subtypeMap = props.subtypeMap;
-    const curSubtypes = props.curSubtypes;
-    const websites = props.websites;
-    const listTypeRefs = props.listTypeRefs;
+interface Web {
+    name: string;
+    description: string;
+    url: string;
+    subtype: string;
+};
 
-    let types = [];
+interface Args {
+    subtypeMap: Record<string, any>;
+    curSubtypes: string[];
+    websites: Array<Web>;
+    listTypeRefs: Record<string, any>;
+    onSubtypeSwitch: (type: string, e: React.MouseEvent<HTMLElement>) => void;
+}
+
+function WebList(props: Args) {
+
+    const { subtypeMap, curSubtypes, websites, listTypeRefs, onSubtypeSwitch } = props;
+
+    let types: string[] = [];
     for (const k of subtypeMap.keys()) {
         types.push(k);
     }
@@ -20,7 +32,7 @@ function WebList(props) {
         <section className='web-list'>
             {types.map((t) => {
                 const curSubtype = curSubtypes[t];
-                const curWebs = websites[t].filter((w) => {
+                const curWebs = websites[t].filter((w: Web) => {
                     return w.subtype === curSubtype
                 });
                 return (
@@ -34,12 +46,12 @@ function WebList(props) {
                                 types={subtypeMap.get(t)}
                                 curType={curSubtype}
                                 onSwitch={(e) => {
-                                    props.onSubtypeSwitch(t, e)
+                                    onSubtypeSwitch(t, e)
                                 }}
                             />
                         }
                         <div className='webs-container'>
-                            {curWebs.map((w) => {
+                            {curWebs.map((w: Web) => {
                                 return <WebPanel
                                     key={w.name}
                                     web={w}
@@ -51,17 +63,6 @@ function WebList(props) {
             })}
         </section>
     )
-
-}
-
-WebList.defaultProps = {
-    types: [],
-    websites: {},
-}
-
-WebList.propTypes = {
-    types: PropTypes.arrayOf(PropTypes.string),
-    websites: PropTypes.object,
 }
 
 export default WebList;

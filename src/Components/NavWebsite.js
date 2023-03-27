@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import PageHeader from './PageHeader.tsx';
 import NavBar from './NavBar';
 import WebList from './WebList';
