@@ -12,7 +12,7 @@
     }
 
     nav ul li {
-        border-bottom: 5px solid #696565;
+        border-bottom: 5px solid #58753F;
         border-radius: 8px;
     }
 
@@ -21,7 +21,7 @@
     /* set the switch menu background color as the page background color */
     ul.switch-menu {
         /* flex-wrap: wrap; */
-        background-color: #615c5c;
+        background-color: #58753F;
         border-radius: none;
     }
 
@@ -38,6 +38,10 @@
     }
 
     ul.switch-menu li:not(.current-type) {
-        background-color: #6d6a6a;
+        background-color: #58653F;
+    }
+
+    ul.switch-menu li:hover {
+        background-color: #47622f;
     }
 }
