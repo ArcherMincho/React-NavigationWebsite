@@ -445,17 +445,18 @@ let websites = {
 };
 
 // get all the main types without repeated ones
-let types = new Set(Object.keys(websites));
-types = [...types];
+let allTypes = new Set<string>(Object.keys(websites));
+const types: string[] = [...allTypes];
 
 // get a map with types as keys and each type's subtypes as values
-let subtypeMap = new Map();
+let subtypeMap = new Map<string, string[]>();
 for (const t of types) {
     let subs = websites[t].map((w) => w.subtype);
     subs = new Set(subs);
     subtypeMap.set(t, [...subs]);
 }
 
+console.log(typeof types);
 
 // get the first subtype of each type
 let firstSubtypes = {};

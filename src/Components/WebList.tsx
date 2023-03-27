@@ -4,17 +4,14 @@ import SwitchMenu from './SwitchMenu';
 import WebPanel from './WebPanel';
 
 
-interface Web {
-    name: string;
-    description: string;
-    url: string;
-    subtype: string;
+interface Websites {
+    [k: string]: Array<{ [k: string]: string }>;
 };
 
 interface Args {
     subtypeMap: Record<string, any>;
     curSubtypes: string[];
-    websites: Array<Web>;
+    websites: Websites;
     listTypeRefs: Record<string, any>;
     onSubtypeSwitch: (type: string, e: React.MouseEvent<HTMLElement>) => void;
 }
@@ -32,7 +29,7 @@ function WebList(props: Args) {
         <section className='web-list'>
             {types.map((t) => {
                 const curSubtype = curSubtypes[t];
-                const curWebs = websites[t].filter((w: Web) => {
+                const curWebs = websites[t].filter((w) => {
                     return w.subtype === curSubtype
                 });
                 return (
@@ -51,7 +48,7 @@ function WebList(props: Args) {
                             />
                         }
                         <div className='webs-container'>
-                            {curWebs.map((w: Web) => {
+                            {curWebs.map((w) => {
                                 return <WebPanel
                                     key={w.name}
                                     web={w}

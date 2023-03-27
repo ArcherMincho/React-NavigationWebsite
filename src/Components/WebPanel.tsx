@@ -2,10 +2,7 @@ import * as React from 'react';
 
 
 interface Web {
-    name: string;
-    description: string;
-    url: string;
-    subtype: string;
+    [k: string]: string;
 };
 
 function WebPanel(props: { web: Web }) {

@@ -1,22 +1,27 @@
 import * as React from 'react';
-import PageHeader from './PageHeader.tsx';
+import PageHeader from './PageHeader';
 import NavBar from './NavBar';
 import WebList from './WebList';
-import ToTopBtn from './ToTopBtn.tsx';
+import ToTopBtn from './ToTopBtn';
 import { websites, types, subtypeMap, firstSubtypes } from '../WebsitesData';
 
 
-function createRefs(types) {
-    const typeNames = types;
-    const refs = new Map();
+interface StateProperties {
+    curType: string;
+    curSubtypes: { [k: string]: string };
+}
+
+function createRefs(types: string[]) {
+    const typeNames = [...types];
+    const refs = new Map<string, any>();
     typeNames.forEach((t) => {
         refs.set(t, React.createRef());
     });
     return refs;
 }
 
-
-class NavWebsite extends React.Component {
+class NavWebsite extends React.Component<any, any> {
+    listTypeRefs: Record<string, any>;
 
     constructor(props) {
         super(props);
@@ -31,12 +36,12 @@ class NavWebsite extends React.Component {
         this.handleSubtypeSwitch = this.handleSubtypeSwitch.bind(this);
     }
 
-    getCurrentTypeNode = (typeName) => {
+    getCurrentTypeNode = (typeName: string) => {
         return this.listTypeRefs.get(typeName).current;
     }
 
-    handleNavClick(e) {
-        const typeName = e.target.innerText;
+    handleNavClick(e: React.MouseEvent<HTMLElement>) {
+        const typeName = (e.target as HTMLElement).innerText;
         const currentTypeNode = this.getCurrentTypeNode(typeName);
         currentTypeNode.scrollIntoView({
             behavior: 'smooth',
@@ -45,11 +50,10 @@ class NavWebsite extends React.Component {
         this.setState({ curType: typeName });
     }
 
-
-    handleSubtypeSwitch(type, e) {
+    handleSubtypeSwitch(type: string, e: React.MouseEvent<HTMLElement>) {
         let curSubtypes = {};
         Object.assign(curSubtypes, this.state.curSubtypes);
-        curSubtypes[type] = e.target.innerText;
+        curSubtypes[type] = (e.target as HTMLElement).innerText;
         this.setState({ curSubtypes });
     }
 
