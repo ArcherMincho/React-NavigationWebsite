@@ -15,7 +15,7 @@ export const isVisible = (el) => {
     // Return true if any of its four corners are visible
     return (
         el.contains(
-            elementFromPoint(rect.left, rect.top)) ||
+            document.elementFromPoint(rect.left, rect.top)) ||
         el.contains(efp(rect.right, rect.top)) ||
         el.contains(efp(rect.right, rect.bottom)) ||
         el.contains(efp(rect.left, rect.bottom))
