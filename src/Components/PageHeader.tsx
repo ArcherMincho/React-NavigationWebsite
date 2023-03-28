@@ -4,7 +4,7 @@ interface Props {
     title: string;
 }
 
-const PageHeader: React.FC<Props> = props => {
+const PageHeader = (props: Props): JSX.Element => {
     const { title = 'page title' } = props;
     return (
         <header>

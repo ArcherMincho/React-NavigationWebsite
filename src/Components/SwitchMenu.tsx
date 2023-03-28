@@ -6,7 +6,7 @@ interface Props {
     onSwitch: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
-const SwitchMenu: React.FC<Props> = props => {
+const SwitchMenu = (props: Props): JSX.Element => {
     // const { curType = '', types = [] } = props;
     const { curType, types, onSwitch } = props;
 

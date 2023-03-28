@@ -5,7 +5,7 @@ interface Web {
     [k: string]: string;
 };
 
-const WebPanel: React.FC<{ web: Web }> = props => {
+const WebPanel = (props: {web: Web}): JSX.Element => {
 
     const web = props.web;
 

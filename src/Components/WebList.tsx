@@ -16,7 +16,7 @@ interface Props {
     onSubtypeSwitch: (type: string, e: React.MouseEvent<HTMLElement>) => void;
 }
 
-const  WebList: React.FC<Props> = props => {
+const  WebList = (props: Props): JSX.Element => {
 
     const { subtypeMap, curSubtypes, websites, listTypeRefs, onSubtypeSwitch } = props;
 

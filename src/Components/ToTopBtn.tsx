@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const ToTopBtn: React.FC = () => {
+const ToTopBtn = (): JSX.Element => {
     return (
         <a href='#top' className='up-btn'>
             <svg

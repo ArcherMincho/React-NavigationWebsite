@@ -5,7 +5,7 @@ interface Props {
     typeRef: any;
 }
 
-const TypeTitle: React.FC<Props> = props => {
+const TypeTitle = (props: Props): JSX.Element => {
     return (
         <h2
             ref={props.typeRef}

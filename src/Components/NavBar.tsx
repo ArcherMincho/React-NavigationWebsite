@@ -8,7 +8,7 @@ interface Props {
     onClick: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
-const NavBar: React.FC<Props> = props => {
+const NavBar = (props: Props): JSX.Element => {
 
     const { types, curType, onClick } = props;
     return (
