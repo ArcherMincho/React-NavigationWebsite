@@ -1,17 +1,14 @@
 import * as React from 'react';
+import UppercaseWrapper from './UppercaseWrapper';
 
-
-interface Web {
-    [k: string]: string;
+interface Props {
+    web: { [k: string]: string };
+    toUppercase: (str: string) => string;
 };
 
-const WebPanel = (props: {web: Web}): JSX.Element => {
+const WebPanel = (props: Props): JSX.Element => {
 
-    const web = props.web;
-
-    const uppercaseFirstLetter = (str: string) => {
-        return str.charAt(0).toUpperCase() + str.slice(1);
-    }
+    const { web, toUppercase } = props;
 
     return (
         <a
@@ -20,10 +17,10 @@ const WebPanel = (props: {web: Web}): JSX.Element => {
             rel='noreferrer'
             target='_blank'
         >
-            <h3>{uppercaseFirstLetter(web.name)}</h3>
-            <p>{uppercaseFirstLetter(web.description)}</p>
+            <h3>{toUppercase(web.name)}</h3>
+            <p>{toUppercase(web.description)}</p>
         </a>
     )
 }
 
-export default WebPanel;
+export default UppercaseWrapper(WebPanel);

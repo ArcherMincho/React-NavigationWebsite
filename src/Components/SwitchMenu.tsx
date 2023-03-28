@@ -1,18 +1,16 @@
 import * as React from 'react';
+import UppercaseWrapper from './UppercaseWrapper';
 
 interface Props {
     curType: string;
     types: string[];
     onSwitch: (e: React.MouseEvent<HTMLElement>) => void;
+    toUppercase: (str: string) => string;
 }
 
 const SwitchMenu = (props: Props): JSX.Element => {
     // const { curType = '', types = [] } = props;
-    const { curType, types, onSwitch } = props;
-
-    const uppercaseFirstLetter = (str: string) => {
-        return str.charAt(0).toUpperCase() + str.slice(1);
-    }
+    const { curType, types, onSwitch, toUppercase } = props;
 
     return (
         <ul className='switch-menu'>
@@ -23,7 +21,7 @@ const SwitchMenu = (props: Props): JSX.Element => {
                         className={(curType == t ? 'current-type' : '')}
                         onClick={onSwitch}
                     >
-                        {uppercaseFirstLetter(t)}
+                        {toUppercase(t)}
                     </li>
                 )
             })}
@@ -31,4 +29,4 @@ const SwitchMenu = (props: Props): JSX.Element => {
     )
 }
 
-export default SwitchMenu;
+export default UppercaseWrapper(SwitchMenu);

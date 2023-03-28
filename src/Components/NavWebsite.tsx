@@ -37,7 +37,7 @@ const NavWebsite = (): React.ReactNode => {
         return listTypeRefs.get(typeName).current;
     }
 
-    const handleNavClick: React.MouseEventHandler<HTMLElement> = (e) => {
+    const handleNavClick: React.MouseEventHandler<HTMLElement> = e => {
         const typeName = (e.target as HTMLElement).innerText;
         const currentTypeNode = getCurrentTypeNode(typeName);
         currentTypeNode.scrollIntoView({
@@ -48,8 +48,9 @@ const NavWebsite = (): React.ReactNode => {
     }
 
     const handleSubtypeSwitch = (type: string, e: React.MouseEvent<HTMLElement>) => {
-        let cSubtypes = {};
-        Object.assign(cSubtypes, curSubtypes);
+        // let cSubtypes = {};
+        // Object.assign(cSubtypes, curSubtypes);
+        const cSubtypes = {...curSubtypes};
         cSubtypes[type] = (e.target as HTMLElement).innerText;
         setCurSubtypes(cSubtypes);
     }
