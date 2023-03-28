@@ -6,12 +6,7 @@ import ToTopBtn from './ToTopBtn';
 import { websites, types, subtypeMap, firstSubtypes } from '../WebsitesData';
 
 
-interface StateProperties {
-    curType: string;
-    curSubtypes: { [k: string]: string };
-}
-
-function createRefs(types: string[]) {
+const createRefs = (types: string[]) => {
     const typeNames = [...types];
     const refs = new Map<string, any>();
     typeNames.forEach((t) => {

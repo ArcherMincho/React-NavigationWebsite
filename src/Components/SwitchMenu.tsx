@@ -10,7 +10,7 @@ const SwitchMenu: React.FC<Props> = props => {
     // const { curType = '', types = [] } = props;
     const { curType, types, onSwitch } = props;
 
-    function uppercaseFirstLetter(str: string) {
+    const uppercaseFirstLetter = (str: string) => {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
 

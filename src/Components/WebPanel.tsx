@@ -5,11 +5,11 @@ interface Web {
     [k: string]: string;
 };
 
-function WebPanel(props: { web: Web }) {
+const WebPanel: React.FC<{ web: Web }> = props => {
 
     const web = props.web;
 
-    function uppercaseFirstLetter(str: string) {
+    const uppercaseFirstLetter = (str: string) => {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
 

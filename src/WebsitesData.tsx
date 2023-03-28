@@ -456,8 +456,6 @@ for (const t of types) {
     subtypeMap.set(t, [...subs]);
 }
 
-console.log(typeof types);
-
 // get the first subtype of each type
 let firstSubtypes = {};
 for (const [t, s] of subtypeMap) {

@@ -1,7 +1,11 @@
 import * as React from 'react';
 
+interface Props {
+    type: string;
+    typeRef: any;
+}
 
-function TypeTitle(props: { type: string; typeRef }) {
+const TypeTitle: React.FC<Props> = props => {
     return (
         <h2
             ref={props.typeRef}
