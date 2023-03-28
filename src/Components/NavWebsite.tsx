@@ -6,7 +6,7 @@ import WebList from './WebList';
 import ToTopBtn from './ToTopBtn';
 import { websites, types, subtypeMap, firstSubtypes } from '../WebsitesData';
 
-const NavWebsite = () => {
+const NavWebsite = (): React.ReactNode => {
     const [curType, setCurType] = useState<string>(types[0]);
     const [curSubtypes, setCurSubtypes] = useState<{ [k: string]: string }>(firstSubtypes);
 
