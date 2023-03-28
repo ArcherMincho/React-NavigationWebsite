@@ -10,13 +10,13 @@ interface Websites {
 
 interface Props {
     subtypeMap: Record<string, any>;
-    curSubtypes: string[];
+    curSubtypes: { [k: string]: string };
     websites: Websites;
     listTypeRefs: Record<string, any>;
     onSubtypeSwitch: (type: string, e: React.MouseEvent<HTMLElement>) => void;
 }
 
-const  WebList = (props: Props): JSX.Element => {
+const WebList = (props: Props): JSX.Element => {
 
     const { subtypeMap, curSubtypes, websites, listTypeRefs, onSubtypeSwitch } = props;
 
