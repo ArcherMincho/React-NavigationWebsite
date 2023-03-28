@@ -2,13 +2,13 @@ import * as React from 'react';
 
 const selectedButtonClass = 'current-type';
 
-interface Args {
+interface Props {
     types: string[];
     curType: string;
     onClick: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
-function NavBar(props: Args) {
+const NavBar: React.FC<Props> = props => {
 
     const { types, curType, onClick } = props;
     return (

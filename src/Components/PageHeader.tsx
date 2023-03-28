@@ -1,6 +1,10 @@
 import * as React from 'react';
 
-function PageHeader(props: { title: string }) {
+interface Props {
+    title: string;
+}
+
+const PageHeader: React.FC<Props> = props => {
     const { title = 'page title' } = props;
     return (
         <header>

@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-interface Args {
+interface Props {
     curType: string;
     types: string[];
-    onSwitch: (e :React.MouseEvent<HTMLElement>) => void;
+    onSwitch: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
-function SwitchMenu(props: Args) {
+const SwitchMenu: React.FC<Props> = props => {
     // const { curType = '', types = [] } = props;
     const { curType, types, onSwitch } = props;
 
