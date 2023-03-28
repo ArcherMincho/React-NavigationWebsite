@@ -37,7 +37,7 @@ const NavWebsite = () => {
         return listTypeRefs.get(typeName).current;
     }
 
-    const handleNavClick = (e: React.MouseEvent<HTMLElement>) => {
+    const handleNavClick: React.MouseEventHandler<HTMLElement> = (e) => {
         const typeName = (e.target as HTMLElement).innerText;
         const currentTypeNode = getCurrentTypeNode(typeName);
         currentTypeNode.scrollIntoView({

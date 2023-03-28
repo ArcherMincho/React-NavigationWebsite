@@ -5,7 +5,8 @@ const selectedButtonClass = 'current-type';
 interface Props {
     types: string[];
     curType: string;
-    onClick: (e: React.MouseEvent<HTMLElement>) => void;
+    // onClick: (e: React.MouseEvent<HTMLElement>) => void;
+    onClick: React.MouseEventHandler<HTMLElement>;
 }
 
 const NavBar = (props: Props): JSX.Element => {
